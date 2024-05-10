@@ -21,7 +21,9 @@ export default MyKidsScreen = ({ navigation }) => {
       <ScrollView className="flex-1 bg-white">
         <View className=" bg-[#FFFFFF] flex-1 justify-start items-start gap-y-5 px-8 ">
           <View className="flex-row items-center justify-between w-full">
-            <Ionicons name="menu" size={24} color="black" />
+          <TouchableOpacity onPress={() => navigation.navigate("Menus")}>
+              <Ionicons name="menu" size={24} color="black" />
+            </TouchableOpacity>
             <Text className=" font-semibold text-lg ">My Kids</Text>
 
             <TouchableOpacity

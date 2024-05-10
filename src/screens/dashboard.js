@@ -17,11 +17,16 @@ export default DashboardScreen = ({ navigation }) => {
       <View className=" bg-[#FFFFFF] flex-1 justify-start items-start gap-y-5 px-8 ">
         <View className="flex-row items-center justify-between w-full">
           <View className="flex-row items-center gap-5 ">
+            <TouchableOpacity onPress={()=>navigation.navigate("Menus")}>
             <Image
               className="h-9 w-9 bg-black rounded-full "
               resizeMode="contain"
             />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
             <Text>Hi, Miss Pro</Text>
+            </TouchableOpacity>
+            
           </View>
           <TouchableOpacity onPress={()=>navigation.navigate('Notification')}>
 
@@ -68,7 +73,7 @@ export default DashboardScreen = ({ navigation }) => {
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate("SelectChildScreen")}>
               <View className="border border-[#9F1419] bg-[#F5F6FF] rounded-xl h-48  px-8 gap-y-4 justify-center items-center">
                 <FontAwesome5 name="user-graduate" size={30} color="#9F1419" />
                 <Text className="text-[#9F1419] font-bold w-[78px] text-center ">

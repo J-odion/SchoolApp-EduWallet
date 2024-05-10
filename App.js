@@ -17,6 +17,8 @@ import TopupScreen from "./src/screens/topup";
 import CardsScreen from "./src/screens/cards";
 import SelectChildScreen from "./src/screens/selectchild";
 import PayfeesScreen from "./src/screens/payfees";
+import ProfileScreen from "./src/screens/profile";
+import MenuScreens from "./src/screens/menus";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -98,15 +100,29 @@ export default function App() {
             name="CardsScreen"
             component={CardsScreen}
           ></Stack.Screen>
-<Stack.Screen
+          <Stack.Screen
             options={{ headerShown: false }}
             name="SelectChildScreen"
             component={SelectChildScreen}
           ></Stack.Screen>
 
-          <Stack.Screen options={{ headerShown: false}} name="Payfees" component={PayfeesScreen} ></Stack.Screen>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Payfees"
+            component={PayfeesScreen}
+          ></Stack.Screen>
 
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Profile"
+            component={ProfileScreen}
+          ></Stack.Screen>
 
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Menus"
+            component={MenuScreens}
+          ></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

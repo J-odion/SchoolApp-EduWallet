@@ -20,7 +20,10 @@ export default MyWalletScreen = ({ navigation }) => {
       <ScrollView className="flex-1 bg-white">
         <View className=" bg-[#FFFFFF] flex-1 justify-start items-start gap-y-5 px-8 ">
           <View className="flex-row items-center justify-between w-full">
-            <Ionicons name="menu" size={24} color="black" />
+            <TouchableOpacity onPress={() => navigation.navigate("Menus")}>
+              <Ionicons name="menu" size={24} color="black" />
+            </TouchableOpacity>
+
             <Text className=" font-semibold text-lg ">My Wallet</Text>
 
             <TouchableOpacity
@@ -48,10 +51,7 @@ export default MyWalletScreen = ({ navigation }) => {
                 </Text>
               </View>
               <View className="text-white justify-center items-start ">
-                <Text className=" text-white font-bold text-[12px] ">
-                
-                  Name
-                </Text>
+                <Text className=" text-white font-bold text-[12px] ">Name</Text>
                 <Text className=" text-white font-bold text-[18px] ">
                   Daniel Pro
                 </Text>
@@ -60,7 +60,7 @@ export default MyWalletScreen = ({ navigation }) => {
           </ImageBackground>
 
           <View className=" flex-row justify-between w-full items-center ">
-            <TouchableOpacity onPress={()=> navigation.navigate("MyWallet")} >
+            <TouchableOpacity onPress={() => navigation.navigate("MyWallet")}>
               <View className="bg-[#f5efff] justify-cente items-center  rounded-2xl py-2 px-8 ">
                 <Image
                   source={require("../assets/images/3User.png")}
@@ -71,26 +71,30 @@ export default MyWalletScreen = ({ navigation }) => {
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=> navigation.navigate("SelectChildScreen")}>
-            <View className="bg-[#ecf0ff] justify-cente items-center rounded-2xl py-2 px-7 ">
-              <Image
-                source={require("../assets/images/Swap.png")}
-                resizeMode="contain"
-                className="w-6"
-              />
-              <Text className="text-[12px] font-semibold">Pay Fees</Text>
-            </View>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("SelectChildScreen")}
+            >
+              <View className="bg-[#ecf0ff] justify-cente items-center rounded-2xl py-2 px-7 ">
+                <Image
+                  source={require("../assets/images/Swap.png")}
+                  resizeMode="contain"
+                  className="w-6"
+                />
+                <Text className="text-[12px] font-semibold">Pay Fees</Text>
+              </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=> navigation.navigate("CardsScreen")} >
-            <View className="bg-[#f2f5f3] justify-cente items-center rounded-2xl py-2 px-8 ">
-              <Image
-                source={require("../assets/images/Folder.png")}
-                resizeMode="contain"
-                className="w-6"
-              />
-              <Text className="text-[12px] font-semibold">Cards</Text>
-            </View>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("CardsScreen")}
+            >
+              <View className="bg-[#f2f5f3] justify-cente items-center rounded-2xl py-2 px-8 ">
+                <Image
+                  source={require("../assets/images/Folder.png")}
+                  resizeMode="contain"
+                  className="w-6"
+                />
+                <Text className="text-[12px] font-semibold">Cards</Text>
+              </View>
             </TouchableOpacity>
           </View>
           <View className=" flex-row justify-between w-full items-center ">

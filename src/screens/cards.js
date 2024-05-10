@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   ScrollView,
   TextInput,
+  ImageBackground,
 } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -29,14 +30,32 @@ export default CardsScreen = ({ navigation }) => {
         </View>
       </View>
 
+      <ImageBackground
+          source={require("../assets/images/blueDash.png")}
+          resizeMode="contain"
+          className="w-full "
+        >
+          <View className="flex-row justify-between p-14 relative items-center rounded-xl  w-full ">
+            <View className="text-white justify-center items-start ">
+              <Text className=" text-white font-bold text-[12px] ">
+                Your Card
+              </Text>
+              <Text className=" text-white font-bold text-lg ">
+                Visa
+              </Text>
+            </View>
+            <View className="text-white justify-center items-start ">
+              <Text className=" text-white font-bold text-[12px] "> Name</Text>
+              <Text className=" text-white font-bold text-lg ">
+                Daniel Pro
+              </Text>
+            </View>
+          </View>
+        </ImageBackground>
+
       <View className="flex-1 w-full  py-5 justify-start items-start px-8 ">
         <View className="flex-1  gap-3 justify-center items-center w-full ">
-          <View className=" w-full justify-center items-center gap-x-4 ">
-            <Text className="text-black text-xl font-bold ">
-              You will receive
-            </Text>
-            <Text className="text-black text-[35px] font-bold">$1200</Text>
-          </View>
+          
 
           <View className=" w-full flex-1 justify-between ">
             <View className="gap-5 mt-4 mb-10">
