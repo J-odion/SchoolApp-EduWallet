@@ -46,7 +46,6 @@ const SplashHomeScreen = ({ navigation }) => {
     if (activeSection < sections.length - 1) {
       setActiveSection(activeSection + 1);
     } else {
-      // Handle navigation when all sections have been shown
       navigation.navigate("Login");
     }
   };
@@ -80,7 +79,7 @@ const SplashHomeScreen = ({ navigation }) => {
             <View className="justify-center items-center w-full  gap-x-2 py-4">
               <View className="justify-center items-center flex-row gap-x-2 py-4">
                 {sections.map((_, index) => (
-                  <View
+                  <View key={index}
                     className={
                       index === activeSection
                         ? "w-2 h-2 rounded-full bg-[#9F1419]"
