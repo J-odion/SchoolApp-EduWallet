@@ -65,7 +65,7 @@ const SplashHomeScreen = ({ navigation }) => {
             <View className=" w-full ">
               <TouchableOpacity
                 className=" justify-end flex-row w-full right-6 top-10 "
-                onPress={() => navigation.goBack()}
+                onPress={() => navigation.navigate("Login")}
               >
                 <MaterialIcons
                   name="close"

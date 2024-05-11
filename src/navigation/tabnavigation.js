@@ -98,9 +98,8 @@ export default TabNav = () => {
             shadowOpacity: 4, 
             shadowRadius: 10,
           },
-          
           tabBarItemStyle: {width: "100%", borderRadius: 40, paddingLeft: 10 },
-          tabBarLabelPosition: "beside-icon",
+          tabBarLabelPosition: "below-icon",
           tabBarActiveBackgroundColor: colors.light_red,
         };
       }}

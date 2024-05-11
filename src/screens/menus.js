@@ -1,7 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 import {
   MaterialCommunityIcons,
   MaterialIcons,
@@ -16,20 +15,20 @@ export default MenuScreens = ({ navigation }) => {
   return (
     <SafeAreaView className="justify-start z-90  flex-1 bg-[#9F1419] px-8 py-6">
       <StatusBar backgroundColor="#9F1419" />
-      <TouchableOpacity onPress={() => navigation.goBack()} className="left-0 ">
+      <TouchableOpacity onPress={() => navigation.closeDrawer()} className="left-0 ">
         <MaterialIcons name="close" size={24} color="white" />
       </TouchableOpacity>
       <View>
         <Image
           className="w-[130px] h-[120px] mt-16 self-center"
-          source={require("../assets/images/whiteLogo.png")}
+          source={require("../assets/images/whiteLogo.png")} 
           resizeMode="contain"
         />
       </View>
 
       <View className="flex-1 top-14">
         <View className="broder-t-white border-b-[1px] gap-y-3 border-t-[1px] border-white py-5">
-          <TouchableOpacity onPress={() => navigation.navigate("SKids")}>
+          <TouchableOpacity onPress={() => {navigation.navigate("SKids"); navigation.closeDrawer()}}>
             <View className="flex-row gap-x-7 items-center">
               <MaterialCommunityIcons
                 name="human-male-female-child"
@@ -40,7 +39,7 @@ export default MenuScreens = ({ navigation }) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate("WalletS")}>
+          <TouchableOpacity onPress={() => {navigation.navigate("WalletS"); navigation.closeDrawer()}}>
             <View className="flex-row gap-x-7 items-center">
               <FontAwesome6 name="wallet" size={24} color="white" />
               <Text className="text-white text-lg font-semibold">
@@ -56,7 +55,7 @@ export default MenuScreens = ({ navigation }) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+          <TouchableOpacity onPress={() => {navigation.navigate("Profile"); navigation.closeDrawer()}}>
             <View className="flex-row gap-x-7 items-center">
               <MaterialIcons name="person" size={24} color="white" />
               <Text className="text-white text-lg font-semibold">
@@ -77,7 +76,7 @@ export default MenuScreens = ({ navigation }) => {
       </View>
 
       <View className="broder-t-white border-b-[1px] border-white py-5">
-        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+        <TouchableOpacity onPress={() => {navigation.navigate("Login"); navigation.closeDrawer()}}>
           <View className="flex-row gap-x-7 items-center">
             <MaterialIcons name="logout" size={24} color="white" />
             <Text className="text-white text-lg font-semibold">Sign Out</Text>
