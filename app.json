@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#9F1419"
-      }
+      },
+      "package": "com.emmyjaff.SchoolAppEduWallet"
     },
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bf752595-d2ae-4245-90fa-9aa25eab69d4"
+      }
     }
   }
 }
