@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "School-App-EduWallet",
-    "slug": "School-App-EduWallet",
+    "name": "EduWallet",
+    "slug": "EduWallet",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#9F1419"
       },
-      "package": "com.emmyjaff.SchoolAppEduWallet"
+      "package": "com.emmyjaff.EduWallet"
     },
     "web": {
       "favicon": "./assets/icon.png"
