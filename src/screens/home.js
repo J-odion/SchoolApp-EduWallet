@@ -10,18 +10,18 @@ import {
 import { FontAwesome6 } from "@expo/vector-icons";
 
 export default function HomeScreen({ navigation }) {
-  // const imag = require("../src/assets/images/bgimage.png");
+  
   const imag = require("../assets/images/bgimage.png");
-  // const Logo = require("../src/assets/images/whiteLogo.png");
+  
   const Logo = require("../assets/images/whiteLogo.png");
   return (
     <View style={{ backgroundColor: "#9F1419", flex: 1 }}>
-      <StatusBar style="auto" />
+      
       <ImageBackground source={imag} style={{ flex: 1 }} resizeMode="cover">
         <View style={{ flex: 1, alignItems: "center",justifyContent: "center",}}>
           <Image source={Logo} resizeMode="cover" />
           <View>
-            <Pressable onPress={() => navigation.push("Login")}>
+            <Pressable onPress={() => navigation.push("HomeSlider")}>
               <FontAwesome6
                 name="circle-arrow-right"
                 size={50}

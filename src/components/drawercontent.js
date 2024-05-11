@@ -14,33 +14,27 @@ import CustomHomeButton from "../utils/CustomHomeButton";
 // import { logoutCall } from "../api";
 
 export default ContentOfDrawer = (props) => {
-  const {
-    bvnVerified,
-    idVerificationStatus,
-    email,
-    accessToken,
-    dateOfBirth,
-    firstName,
-    lastName,
-    profilePicture,
-    hasProvidedBVN,
-    phoneNumber,
-    hasIdDocument,
-  } = useSelector((state) => state.user);
-//   const dispatch = useDispatch();
+  // const {
+    
+  //   email,
+  //   accessToken,
+  //   dateOfBirth,
+  //   firstName,
+  //   lastName,
+  //   profilePicture,
+  // } = useSelector((state) => state.user);
 
-//   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
-  const profileNavigate = () => {
-    props.navigation.navigate("Profile", {
-      profilePicture,
-      firstName,
-      lastName,
-      email,
-      dateOfBirth,
-      accessToken,
-    });
-  };
+  // const profileNavigate = () => {
+  //   props.navigation.navigate("Profile", {
+  //     profilePicture,
+  //     firstName,
+  //     lastName,
+  //     email,
+  //     dateOfBirth,
+  //     accessToken,
+  //   });
+  // };
 
 //   const handleLogout = async () => {
 //     setIsLoggingOut(true);
@@ -177,30 +171,7 @@ export default ContentOfDrawer = (props) => {
         </View>
       </DrawerContentScrollView>
 
-      <View
-        style={{
-          marginBottom: 24,
-          marginHorizontal: 30,
-        }}
-      >
-        <CustomHomeButton
-          bgCol={colors.primary_blue}
-          clickHandler={handleLogout}
-          text={isLoggingOut ? "Logging out..." : "Logout"}
-          isLoggingOut={isLoggingOut}
-          icon={
-            <MaterialCommunityIcons
-              name="logout"
-              color={colors.primary_blue}
-              size={17}
-            />
-          }
-          style={styles.logout}
-          textStyle={{
-            color: colors.primary_blue,
-          }}
-        />
-      </View>
+      
     </View>
   );
 };

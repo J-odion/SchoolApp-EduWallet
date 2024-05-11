@@ -13,14 +13,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
 export default MyWalletScreen = ({ navigation }) => {
   return (
     <SafeAreaView className="flex-1 py-5 bg-white">
+     <StatusBar backgroundColor="#9F1419" />
       <ScrollView className="flex-1 bg-white">
         <View className=" bg-[#FFFFFF] flex-1 justify-start items-start gap-y-5 px-8 ">
           <View className="flex-row items-center justify-between w-full">
-            <TouchableOpacity onPress={() => navigation.navigate("Menus")}>
+            <TouchableOpacity onPress={()=>navigation.openDrawer()}>
               <Ionicons name="menu" size={24} color="black" />
             </TouchableOpacity>
 
@@ -60,7 +62,7 @@ export default MyWalletScreen = ({ navigation }) => {
           </ImageBackground>
 
           <View className=" flex-row justify-between w-full items-center ">
-            <TouchableOpacity onPress={() => navigation.navigate("MyWallet")}>
+            <TouchableOpacity onPress={()=>navigation.navigate("TopupScreen")}>
               <View className="bg-[#f5efff] justify-cente items-center  rounded-2xl py-2 px-8 ">
                 <Image
                   source={require("../assets/images/3User.png")}
@@ -101,7 +103,7 @@ export default MyWalletScreen = ({ navigation }) => {
             <Text className="text-black font-bold text-lg text-center ">
               Activity
             </Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Kids")}>
+            <TouchableOpacity >
               <Text className="text-[#9F1419] font-bold text-sm text-center ">
                 View All
               </Text>

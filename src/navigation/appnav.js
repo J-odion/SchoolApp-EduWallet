@@ -1,19 +1,23 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useSelector } from "react-redux";
 
-// import TabNavigation from "./TabNavigation";
+import HomeScreen from "../screens/home";
+import LoginScreen from "../screens/login";
+import ForgetPasswordScreen from "../screens/forgetpassword";
+import SuccessScreen from "../screens/success";
+import SignupScreen from "../screens/signup";
 
-import LoginScreen from "./screens/login";
-import ForgetPasswordScreen from "./screens/forgetpassword";
-import SuccessScreen from "./screens/success";
-import SignupScreen from "./screens/signup";
-import DashboardScreen from "./screens/dashboard";
-import MyWalletScreen from "./screens/mywallet";
-import NotificationScreen from "./screens/notification";
-import MyKidsScreen from "./screens/mykids";
-import AddChildScreen from "./screens/addchild";
+import NotificationScreen from "../screens/notification";
 
+import AddChildScreen from "../screens/addchild";
+import AddchildSplash from "../screens/addchildSplash";
+import TopupScreen from "../screens/topup";
+import CardsScreen from "../screens/cards";
+import SelectChildScreen from "../screens/selectchild";
+import PayfeesScreen from "../screens/payfees";
 
+import MenuScreens from "../screens/menus";
+import SplashHomeScreen from "../screens/splashhome";
+import TabNav from "./tabnavigation";
 
 // const HelpComponent = () => {
 //   const openWhatsapp = async () => {
@@ -45,83 +49,98 @@ import AddChildScreen from "./screens/addchild";
 // };
 
 export default MainAppNavigator = () => {
-//   const { accessToken, passcode } = useSelector((state) => state.user);
 
-//   const initialRouteName = !accessToken
-//     ? "Home"
-//     : passcode
-//     ? "Dashboard"
-//     : "Home";
-  const MainStack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
 
   return (
-    <MainStack.Navigator
-    //   initialRouteName={initialRouteName}
-    initialRouteName="Home"
-      screenOptions={{ headerShown: false, headerBackTitle: "" }}
-    >
-      <MainStack.Screen
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
         options={{ headerShown: false }}
         name="Home"
         component={HomeScreen}
       />
-      <MainStack.Screen
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="HomeSlider"
+        component={SplashHomeScreen}
+      ></Stack.Screen>
+      <Stack.Screen
         options={{ headerShown: false }}
         name="Login"
         component={LoginScreen}
       />
-      <MainStack.Screen
+      <Stack.Screen
         options={{ headerShown: false }}
         name="ForgetPassword"
         component={ForgetPasswordScreen}
       />
-      <MainStack.Screen
+      <Stack.Screen
         options={{ headerShown: false }}
         name="Success"
         component={SuccessScreen}
       />
-      <MainStack.Screen
+      <Stack.Screen
         options={{ headerShown: false }}
         name="Signup"
         component={SignupScreen}
-      ></MainStack.Screen>
+      ></Stack.Screen>
 
-      <MainStack.Screen
+      <Stack.Screen
         options={{ headerShown: false }}
         name="Dashboard"
-        component={DashboardScreen}
-      ></MainStack.Screen>
+        component={TabNav}
+      ></Stack.Screen>
 
-      <MainStack.Screen
-        options={{ headerShown: false }}
-        name="MyWallet"
-        component={MyWalletScreen}
-      ></MainStack.Screen>
-
-      <MainStack.Screen
+      <Stack.Screen
         options={{ headerShown: false }}
         name="Notification"
         component={NotificationScreen}
-      ></MainStack.Screen>
+      ></Stack.Screen>
 
-      <MainStack.Screen
+     
+
+      <Stack.Screen
         options={{ headerShown: false }}
-        name="Kids"
-        component={MyKidsScreen}
-      ></MainStack.Screen>
+        name="AddKidSplash"
+        component={AddchildSplash}
+      ></Stack.Screen>
 
-      <MainStack.Screen
+      <Stack.Screen
         options={{ headerShown: false }}
         name="AddChild"
         component={AddChildScreen}
-      ></MainStack.Screen>
-      {/* 
-      <AppStack.Screen
-        name="AppHome"
-        component={TabNavigation}
-      ></AppStack.Screen> */}
-    </MainStack.Navigator>
+      ></Stack.Screen>
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="TopupScreen"
+        component={TopupScreen}
+      ></Stack.Screen>
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="CardsScreen"
+        component={CardsScreen}
+      ></Stack.Screen>
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="SelectChildScreen"
+        component={SelectChildScreen}
+      ></Stack.Screen>
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Payfees"
+        component={PayfeesScreen}
+      ></Stack.Screen>
+
+    
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Menus"
+        component={MenuScreens}
+      ></Stack.Screen>
+    </Stack.Navigator>
   );
 };
-
-

@@ -2,13 +2,11 @@ import {
   View,
   Text,
   TouchableOpacity,
-  ScrollView,
   TextInput,
 } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
 import { Formik } from "formik";
 
 export default TopupScreen = ({ navigation }) => {

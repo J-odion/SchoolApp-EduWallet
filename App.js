@@ -2,6 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Provider as PaperProvider } from "react-native-paper";
 
+import MainAppNavigator from "./src/navigation/appnav"
 import HomeScreen from "./src/screens/home";
 import LoginScreen from "./src/screens/login";
 import ForgetPasswordScreen from "./src/screens/forgetpassword";
@@ -19,6 +20,7 @@ import SelectChildScreen from "./src/screens/selectchild";
 import PayfeesScreen from "./src/screens/payfees";
 import ProfileScreen from "./src/screens/profile";
 import MenuScreens from "./src/screens/menus";
+import SplashHomeScreen from "./src/screens/splashhome";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -26,104 +28,7 @@ export default function App() {
   return (
     <PaperProvider>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Home"
-            component={HomeScreen}
-          />
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Login"
-            component={LoginScreen}
-          />
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="ForgetPassword"
-            component={ForgetPasswordScreen}
-          />
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Success"
-            component={SuccessScreen}
-          />
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Signup"
-            component={SignupScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Dashboard"
-            component={DashboardScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="MyWallet"
-            component={MyWalletScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Notification"
-            component={NotificationScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Kids"
-            component={MyKidsScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="AddKidSplash"
-            component={AddchildSplash}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="AddChild"
-            component={AddChildScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="TopupScreen"
-            component={TopupScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="CardsScreen"
-            component={CardsScreen}
-          ></Stack.Screen>
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="SelectChildScreen"
-            component={SelectChildScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Payfees"
-            component={PayfeesScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Profile"
-            component={ProfileScreen}
-          ></Stack.Screen>
-
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Menus"
-            component={MenuScreens}
-          ></Stack.Screen>
-        </Stack.Navigator>
+        <MainAppNavigator />
       </NavigationContainer>
     </PaperProvider>
   );

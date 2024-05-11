@@ -6,6 +6,7 @@ import {
   ImageBackground,
   ScrollView,
   StyleSheet,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -18,10 +19,11 @@ import { Ionicons } from "@expo/vector-icons";
 export default MyKidsScreen = ({ navigation }) => {
   return (
     <SafeAreaView className="flex-1 py-5 bg-white">
+      <StatusBar backgroundColor="White" />
       <ScrollView className="flex-1 bg-white">
         <View className=" bg-[#FFFFFF] flex-1 justify-start items-start gap-y-5 px-8 ">
           <View className="flex-row items-center justify-between w-full">
-          <TouchableOpacity onPress={() => navigation.navigate("Menus")}>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
               <Ionicons name="menu" size={24} color="black" />
             </TouchableOpacity>
             <Text className=" font-semibold text-lg ">My Kids</Text>

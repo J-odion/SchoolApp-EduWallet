@@ -20,8 +20,8 @@ import {
 
 export default function SelectChildScreen({ navigation }) {
   return (
-    <SafeAreaView className="flex-1 ">
-      <View className="rounded-t-3xl align-top  bottom-0 flex-1 px-8 justify-start items-center pb-8">
+    <SafeAreaView className="flex-1 bg-white">
+      <View className="rounded-t-3xl align-top bg-inherit  bottom-0 flex-1 px-8 justify-start items-center pb-8">
         <View className=" flex-1 w-full ">
           <View className="flex-row items-center justify-between w-full pt-10">
             <Text className="font-bold text-center flex-1 text-lg">
