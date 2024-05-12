@@ -19,8 +19,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#9F1419"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFF"
       },
       "package": "com.emmyjaff.EduWallet"
     },
@@ -29,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "bf752595-d2ae-4245-90fa-9aa25eab69d4"
+        "projectId": "6966311a-3533-4b18-9948-831add61a099"
       }
     }
   }
