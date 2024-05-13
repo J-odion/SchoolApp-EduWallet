@@ -15,7 +15,7 @@ export default function HomeScreen({ navigation }) {
         <View style={{ flex: 1, alignItems: "center",justifyContent: "center",}}>
           <Image source={Logo} resizeMode="cover" />
           <View>
-            <TouchableOpacity onPress={() => navigation.navigate("HomeSlider")}>
+            <TouchableOpacity onPress={() => navigation.navigate("HomeSlider")} className=" p-3 rounded-full items-center justify-center bg-[#9F1419]">
               <FontAwesome6
                 name="circle-arrow-right"
                 size={50}
